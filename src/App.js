@@ -14,8 +14,8 @@ function App() {
   return (
     <main>
       <section className='container'>
-        <h3>Today's birthday is:  {persons.length}</h3>
-        <Persons persons={persons}/>
+        <h3>Today's birthday is:{persons.length}</h3>
+        <Persons ali={persons}/>
         <button onClick={() => setPersons([])}>Clean</button>
         <Refresh/>  
       </section>

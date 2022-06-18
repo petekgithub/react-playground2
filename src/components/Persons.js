@@ -1,9 +1,11 @@
 import React from 'react'
 
+
 const Persons = ({persons}) => {
   return (
     <>
     {persons.map((person) => {
+      console.log(persons);
       const {id,name,age,image} = person;
       return (
         <article key={id}
