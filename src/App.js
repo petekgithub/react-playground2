@@ -1,26 +1,24 @@
 import { useState } from 'react';
 import './App.css';
 import data from './data'
-import Kisiler from './components/Kisiler';
-import Yenile from './components/Yenile';
+import Persons from './components/Persons';
+import Refresh from './components/Refresh';
 
 
 function App() {
 
-  const [kisiler, setKisiler] = useState(data);
-  const [yenile, setYenile] = useState("");
+  const [persons, setPersons] = useState(data);
+  //onst [yenile, setYenile] = useState("");
   //console.log(kisiler)
 
   return (
     <main>
       <section className='container'>
-        <h3>Bugün {kisiler.length} doğumgünü var.</h3>
-        <Kisiler kisiler={kisiler}/>
-        <button onClick={() => setKisiler([])}>Temizle</button>
-        <Yenile yenile={yenile}/>
-        <button onClick={() => setYenile([])}>Yenile</button>
+        <h3>Today's birthday is:  {persons.length}</h3>
+        <Persons persons={persons}/>
+        <button onClick={() => setPersons([])}>Clean</button>
+        <Refresh/>  
       </section>
-     
     </main>
   );
 }
