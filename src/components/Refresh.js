@@ -18,7 +18,7 @@ const Refresh = () => {
     <>
       <button onClick={() => navigate(-1)}>go back</button>
       <Routes>
-        <Route exact path="/" element={<Persons/>}/>
+        <Route exact path="/" element={<Persons persons={[]} />}/>
       </Routes>
     </>
   )
