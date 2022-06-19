@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 const People = (props) => {
@@ -14,7 +14,6 @@ const People = (props) => {
           <div>
             <h4>{name}</h4>
             <h2>{age} years old.</h2>
-            
           </div>
         </article>
       )
