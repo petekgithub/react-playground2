@@ -1,15 +1,15 @@
 import React from 'react'
 
 
-const Persons = ({persons}) => {
+const Persons = (props) => {
+
   return (
     <>
-    {persons.map((person) => {
-      console.log(persons);
+    {props.persons.map((person) => {
+      //console.log(persons);
       const {id,name,age,image} = person;
       return (
-        <article key={id}
-        className='person'>
+        <article key={id} className='person'>
           <img src={image} alt={name} />
           <div>
             <h4>{name}</h4>

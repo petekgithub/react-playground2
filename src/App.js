@@ -3,21 +3,24 @@ import './App.css';
 import data from './data'
 import Persons from './components/Persons';
 import Refresh from './components/Refresh';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 
 function App() {
 
   const [persons, setPersons] = useState(data);
-  //onst [yenile, setYenile] = useState("");
-  //console.log(kisiler)
+  //console.log(persons)
 
   return (
     <main>
       <section className='container'>
         <h3>Today's birthday is:{persons.length}</h3>
-        <Persons ali={persons}/>
+        <Persons persons={persons}/>
         <button onClick={() => setPersons([])}>Clean</button>
-        <Refresh/>  
+        <Router>
+        <Refresh/>
+        </Router>       
+          
       </section>
     </main>
   );
