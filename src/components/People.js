@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-const Persons = (props) => {
+const People = (props) => {
 
   return (
     <>
-    {props.persons.map((person) => {
-      //console.log(persons);
+    {props.people.map((person) => {
+      //console.log(People);
       const {id,name,age,image} = person;
       return (
         <article key={id} className='person'>
@@ -14,6 +14,7 @@ const Persons = (props) => {
           <div>
             <h4>{name}</h4>
             <h2>{age} years old.</h2>
+            
           </div>
         </article>
       )
@@ -23,4 +24,4 @@ const Persons = (props) => {
   )
 }
 
-export default Persons;
+export default People;
